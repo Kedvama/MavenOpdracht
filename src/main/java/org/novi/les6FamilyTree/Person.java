@@ -88,7 +88,17 @@ public class Person {
     }
 
     public void setPartner(Person partner) {
-        this.partner = partner;
+        if(this.partner != partner){
+            this.partner = partner;
+            partner.setPartner(this);
+        }
+
+        // share children
+        if(this.children.size() > 0){
+            for(Person child: this.children){
+                partner.addChild(child);
+            }
+        }
     }
 
     public ArrayList<Person> getSiblings() {
