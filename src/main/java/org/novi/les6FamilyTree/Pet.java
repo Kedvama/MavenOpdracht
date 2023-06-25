@@ -1,4 +1,4 @@
-package familytree;
+package org.novi.les6FamilyTree;
 
 public class Pet {
 
@@ -6,7 +6,7 @@ public class Pet {
     private String name;
     private int age;
     private String species;
-    private Persons owner;
+    private Person owner;
 
     //constructor
     public Pet(String name, int age, String species){
@@ -40,11 +40,11 @@ public class Pet {
         this.species = species;
     }
 
-    public Persons getOwner() {
+    public Person getOwner() {
         return owner;
     }
 
-    public void setOwner(Persons owner) {
+    public void setOwner(Person owner) {
         this.owner = owner;
         owner.addPet(this);
     }
